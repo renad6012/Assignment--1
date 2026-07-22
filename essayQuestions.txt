@@ -1,0 +1,55 @@
+
+B. Part 2: Essay Questions:
+
+1. What is the difference between forEach and for...of? When would you use each?
+forEach>>>
+ . It is a function specific to arrays.
+ . It iterates through each element in the array .
+ . You cannot use `break` or `continue` inside it.
+ . It does not return a new array.
+Usage>>>  when you want to perform an action on every element in an array and you don't need to stop the loop early.
+
+forOf>>>
+ . It is a Loop that works with any Iterable such as Arrays and Strings.
+ . It iterates through each element one after the other.
+ . You can use break and continue.
+ . It is simply a Loop to iterate through the elements.
+Usage>>> when you need more control over the loop, such as using break, continue, or iterating over different iterable objects.
+___________________________________________________________________________________________________________________________________________________
+
+2. What is hoisting and what is the Temporal Dead Zone (TDZ)? Explain with examples?
+ .  Hoisting is JavaScript's behavior of moving declarations to the top of their scope before code execution.
+ex:
+console.log(x);
+ var x = 10;
+ output>>> undefined
+""the variable is hoisted, but its value is not""
+
+ . TDZ: is the period between entering the scope and declaring a variable with let or const. During this period, the variable cannot be accessed.
+ex:
+console.log(age);
+ let age = 20;
+ output>>> ReferenceError: Cannot access 'age' before initialization
+ ""because let and const are hoisted, but they remain in the TDZ until their declaration is reached.""
+____________________________________________________________________________________________________________________________________________________
+
+3. What are the main differences between == and ===?
+(==) : Compares only the values and performs type coercion if the data types are different.
+(===) : Compares both the value and the data type without type coercion.
+________________________________________________________________________________________________________________________________________________
+
+4. Explain how try-catch works?
+try-catch is used to handle errors in JavaScript without stopping the program.
+The code inside the try block is executed first.
+ If an error occurs, JavaScript skips the remaining code in try and executes the catch block.
+
+why it is important in async operations?
+In asynchronous operations (such as async/await), try-catch is used to catch errors from promises, without it the application may crash or produce unhandled promise errors.
+______________________________________________________________________________________________________________________________________________________________________________
+
+5. What’s the difference between type conversion and coercion?
+ . Type Conversion:
+ (Explicit Conversion): The programmer converts a value from one data type to another manually using functions like Number(), String(), or Boolean.
+
+ . Type Coersion:
+ (Implicit Conversion): JavaScript automatically converts a value from one data type to another when needed.
